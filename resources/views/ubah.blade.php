@@ -14,10 +14,27 @@
       body{
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .conta{
+        background-color: rgb(32, 86, 236);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+    }
     </style>
   </head>
     <body>
-        <h3>Halaman Ubah Data Kependudukan</h3>
+      <div class="conta p-3 rounded ">
+        <img src="{{asset('admin/dist/img/tut.png')}}" alt="Tutwuri Logo" class="brand-image img-circle elevation-3 "  style="float:left; margin:0 9px 3px 0;" >
+        <h2 style="margin-top: 10px; color: rgb(233, 247, 37)" >KOTA.SURAKARTA</h2>
+        <h4 style="margin-top: 10px; color: white">SISTEM PENCATATAN PENDUDUK UNIVERSITAS DUTA BANGSA</h4>
+        <h5 style="color: white">KEMENTRIAN PENDIDIKAN DAN KEBUDAYAAN</h5>
+        <h6 style="color: white">Universitas Duta Bangsa Surakarta</h6>
+        <h3 style="color: white">Halaman Ubah Data Kependudukan</h3>
+        </div>
 <br>
 <div class="my-3 p-3 bg-body rounded shadow-sm">
         <a href="/kependudukan" class="btn btn-warning" style="margin-left: 10px;"> Kembali </a>

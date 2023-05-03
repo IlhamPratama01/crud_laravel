@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KependudukanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,20 +18,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', 'App\Http\Controllers\KependudukanController@index');
+Route::get('/index', [KependudukanController::class,'index']);
 
-Route::get('/kependudukan', 'App\Http\Controllers\KependudukanController@tampil');
+Route::get('/kependudukan', [KependudukanController::class,'tampil']);
 
-Route::get('/tambah', 'App\Http\Controllers\KependudukanController@tambah');
+Route::get('/tambah', [KependudukanController::class,'tambah']);
 
-Route::post('/kependudukan/store', 'App\Http\Controllers\KependudukanController@simpan');
+Route::post('/kependudukan/store', [KependudukanController::class,'simpan']);
 
-Route::get('/kependudukan/ubah/{nik}', 'App\Http\Controllers\KependudukanController@ubah');
+Route::get('/kependudukan/ubah/{nik}', [KependudukanController::class,'ubah']);
 
-Route::post('/kependudukan/edit', 'App\Http\Controllers\KependudukanController@edit');
+Route::post('/kependudukan/edit', [KependudukanController::class,'edit']);
 
-Route::get('/hapus/{nim}','App\Http\Controllers\KependudukanController@hapus');
+Route::get('/hapus/{nim}',[KependudukanController::class,'hapus']);
 
-Route::get('/kependudukan/cetak_pdf','App\Http\Controllers\KependudukanController@cetak_pdf');
+Route::get('/kependudukan/cetak_pdf',[KependudukanController::class,'cetak_pdf']);
 
-Route::get('/kependudukan/export_excel','App\Http\Controllers\KependudukanController@export_excel');
+Route::get('/kependudukan/export_excel',[KependudukanController::class,'export_excel']);
