@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Website</title>
 <style>
     h3 {
@@ -48,7 +49,7 @@
             <a href="/kependudukan/export_excel" class="btn btn-success my-3" style="margin-left: 5px;" target="blank"> Export EXCEL</a>
         </div>
                 <br>
-
+                <div data-aos="fade-left" data-aos-duration="1500">
         <table border="10" class="table table-bordered table-hover table-striped" >
             <thead style="background-color: yellow;">
                  <tr>
@@ -90,6 +91,11 @@
         </table>
         {{ $data->links() }}
 </div>
+<!-- Scrolling animaton -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </html>
 @endsection
 
